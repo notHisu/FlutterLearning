@@ -1,0 +1,37 @@
+[
+  {
+    "categoryName": "Theme 5: Marveling at the Artistic World",
+    "type": "multipleChoices",
+    "question": "Which Renaissance artist is considered the father of perspective?",
+    "correctAnswer": ["Filippo Brunelleschi"],
+    "incorrectAnswers": ["Leonardo da Vinci", "Michelangelo", "Raphael"]
+  },
+  {
+    "categoryName": "Theme 5: Marveling at the Artistic World",
+    "type": "multipleResponses",
+    "question": "What are the three primary colors in classical painting?",
+    "correctAnswers": ["Red", "Yellow", "Blue"],
+    "incorrectAnswers": ["Orange", "Green", "Purple", "Pink"]
+  },
+  {
+    "categoryName": "Theme 5: Marveling at the Artistic World",
+    "type": "picture",
+    "question": "Identify the following musical instruments: piano, violin, guitar, drums.",
+    "correctAnswer": ["This is the correct answer"],
+    "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
+  },
+  {
+    "categoryName": "Theme 5: Marveling at the Artistic World",
+    "type": "video",
+    "question": "Explain the concept of sonata form in classical music.",
+    "correctAnswer": ["Nothing here hehe"],
+    "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
+  },
+  {
+    "categoryName": "Theme 5: Marveling at the Artistic World",
+    "type": "audio",
+    "question": "Listen to a recording of Beethoven's Symphony No. 5.",
+    "correctAnswer": ["Nothing here hehe"],
+    "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
+  }
+]
