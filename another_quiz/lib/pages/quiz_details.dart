@@ -105,6 +105,8 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
               ),
             ),
 
+            const SizedBox(height: 10),
+
             // Continue button
             MyButton(
                 text: "Begin",

@@ -24,7 +24,7 @@
   {
     "categoryName": "Theme 1: Exploration of the Cosmos",
     "type": "video",
-    "path": "lib/videos/test.mp4",
+    "path": "assets/videos/test.mp4",
     "question": "Explain the formation of stars and planets.",
     "correctAnswers": ["Nothing here hehe"],
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]

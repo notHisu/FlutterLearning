@@ -1,14 +1,14 @@
 import 'dart:async';
-
 import 'package:another_quiz/components/audio_player.dart';
 import 'package:another_quiz/components/timer.dart';
-import 'package:another_quiz/components/video_player.dart';
+import 'package:another_quiz/components/chewie_list_item.dart';
 import 'package:another_quiz/models/category.dart';
 import 'package:another_quiz/models/question.dart';
 import 'package:another_quiz/pages/result_page.dart';
 import 'package:another_quiz/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:video_player/video_player.dart';
 
 class QuizPage extends StatefulWidget {
   final int timeLimit;
@@ -26,7 +26,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Question> testQuestions = [
+  /*  List<Question> widget.questions = [
     // Multiple Choices
     Question(
         categoryName: "Entertainment: Video Games",
@@ -101,7 +101,7 @@ class _QuizPageState extends State<QuizPage> {
         correctAnswers: ["John Lennon"],
         incorrectAnswers: ["The Beatles", "Paul McCartney", "George Harrison"]),
   ];
-
+ */
   final TextStyle questionStyle = const TextStyle(
       fontSize: 18.0, fontWeight: FontWeight.w500, color: Colors.black87);
 
@@ -110,9 +110,23 @@ class _QuizPageState extends State<QuizPage> {
   final Map<int, dynamic> answers = {};
   final GlobalKey<ScaffoldState> key = GlobalKey<ScaffoldState>();
 
+  List<dynamic> selectedOptions = [];
+
+  void onSelectedOption(dynamic option, bool isSelected) {
+    setState(() {
+      if (isSelected) {
+        selectedOptions.add(option);
+      } else {
+        selectedOptions.remove(option);
+      }
+      answers[currentIndex] = selectedOptions.join(' ');
+      print(answers[currentIndex]);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    //Question question = testQuestions[currentIndex];
+    //Question question = widget.questions[currentIndex];
     Question question = widget.questions[currentIndex];
     //print(question);
     final List<dynamic> options = question.incorrectAnswers!;
@@ -147,18 +161,193 @@ class _QuizPageState extends State<QuizPage> {
                 TimerWidget(
                     timeLimit: widget.timeLimit,
                     onTimerExpired: onTimerExpired),
-                // MultipleChoices(currentIndex: currentIndex, question: question),
-                // added switch statement to handle different question types
-                switch (question.type) {
-                  Type.multipleChoices =>
-                    multipleChoices(context, question, options),
-                  //Type.multipleResponses =>
-                  // multipleResponses(context, question, options),
-                  Type.picture => picture(context, question, options),
-                  Type.video => video(context, question, options),
-                  Type.audio => audio(context, question, options),
-                  _ => multipleChoices(context, question, options),
-                },
+
+                // Switch between question types
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          CircleAvatar(
+                            backgroundColor: Colors.white70,
+                            child: Text("${currentIndex + 1}"),
+                          ),
+                          const SizedBox(width: 16.0),
+                          Expanded(
+                            child: Text(
+                              question.question!,
+                              softWrap: true,
+                              style: MediaQuery.of(context).size.width > 800
+                                  ? questionStyle.copyWith(fontSize: 30.0)
+                                  : questionStyle,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20.0),
+
+                      // Switch between question types
+                      if (question.type == Type.multipleChoices)
+                        Card(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ...options.map((option) => RadioListTile(
+                                    title: Text(
+                                      '$option',
+                                      style: MediaQuery.of(context).size.width >
+                                              800
+                                          ? const TextStyle(fontSize: 30.0)
+                                          : null,
+                                    ),
+                                    groupValue: answers[currentIndex],
+                                    value: option,
+                                    activeColor: Colors.grey,
+                                    onChanged: (dynamic value) {
+                                      setState(() {
+                                        answers[currentIndex] = option;
+                                      });
+                                    },
+                                  )),
+                            ],
+                          ),
+                        )
+                      else if (question.type == Type.multipleResponses)
+                        Card(
+                          child: ListBody(
+                            children: [
+                              ...options
+                                  .map((option) => CheckboxListTile(
+                                        title: Text(
+                                          '$option',
+                                          style: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  800
+                                              ? const TextStyle(fontSize: 30.0)
+                                              : null,
+                                        ),
+                                        activeColor: Colors.grey,
+                                        controlAffinity:
+                                            ListTileControlAffinity.leading,
+                                        value: selectedOptions.contains(option),
+                                        onChanged: (isChecked) =>
+                                            onSelectedOption(
+                                                option, isChecked!),
+                                      ))
+                                  .toList(),
+                            ],
+                          ),
+                        )
+                      else if (question.type == Type.picture)
+                        Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.network(
+                                question.path!,
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Card(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ...options.map((option) => RadioListTile(
+                                        title: Text(
+                                          '$option',
+                                          style: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  800
+                                              ? const TextStyle(fontSize: 30.0)
+                                              : null,
+                                        ),
+                                        groupValue: answers[currentIndex],
+                                        value: option,
+                                        activeColor: Colors.grey,
+                                        onChanged: (dynamic value) {
+                                          setState(() {
+                                            answers[currentIndex] = option;
+                                          });
+                                        },
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ],
+                        )
+                      else if (question.type == Type.video)
+                        Column(
+                          children: [
+                            SizedBox(
+                              height: 300,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: ChewieListItem(
+                                    videoPlayerController:
+                                        VideoPlayerController.asset(
+                                            question.path!),
+                                    looping: true),
+                              ),
+                            ),
+                            Card(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ...options.map((option) => RadioListTile(
+                                        title: Text(
+                                          '$option',
+                                          style: MediaQuery.of(context)
+                                                      .size
+                                                      .width >
+                                                  800
+                                              ? const TextStyle(fontSize: 30.0)
+                                              : null,
+                                        ),
+                                        groupValue: answers[currentIndex],
+                                        value: option,
+                                        activeColor: Colors.grey,
+                                        onChanged: (dynamic value) {
+                                          setState(() {
+                                            answers[currentIndex] = option;
+                                          });
+                                        },
+                                      )),
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      else
+                        Card(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ...options.map((option) => RadioListTile(
+                                    title: Text(
+                                      '$option',
+                                      style: MediaQuery.of(context).size.width >
+                                              800
+                                          ? const TextStyle(fontSize: 30.0)
+                                          : null,
+                                    ),
+                                    groupValue: answers[currentIndex],
+                                    value: option,
+                                    activeColor: Colors.grey,
+                                    onChanged: (dynamic value) {
+                                      setState(() {
+                                        answers[currentIndex] = option;
+                                      });
+                                    },
+                                  )),
+                            ],
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
 
                 Expanded(
                   child: Container(
@@ -192,7 +381,7 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 
-  Widget multipleChoices(
+  /*  Widget multipleChoices(
       BuildContext context, Question question, List<dynamic> options) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -247,17 +436,6 @@ class _QuizPageState extends State<QuizPage> {
 
   Widget multipleResponses(
       BuildContext context, Question question, List<dynamic> options) {
-    Map<dynamic, bool> listToMap(List<dynamic> list) {
-      final Map<dynamic, bool> map = {};
-      for (final dynamic item in list) {
-        map[item] = false;
-      }
-      return map;
-    }
-
-    Map<dynamic, bool> optionsMap = listToMap(options);
-    List<dynamic> selectedOptions = [];
-
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -283,29 +461,19 @@ class _QuizPageState extends State<QuizPage> {
           const SizedBox(height: 20.0),
           Card(
             child: Column(
-              children: [
-                ListView(
-                  shrinkWrap: true,
-                  children: optionsMap.entries.map((entry) {
-                    final key = entry.key;
-                    final value = entry.value;
-                    return CheckboxListTile(
-                      title: Text(key),
-                      value: value,
-                      onChanged: (newValue) {
-                        setState(() {
-                          optionsMap[key] = newValue!;
-                          if (newValue) {
-                            selectedOptions.add(key);
-                          } else {
-                            selectedOptions.remove(key);
-                          }
-                          answers[currentIndex] = selectedOptions;
-                        });
-                      },
-                    );
-                  }).toList(),
-                ),
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                ...options.map((option) => CheckboxListTile(
+                      title: Text(
+                        '$option',
+                        style: MediaQuery.of(context).size.width > 800
+                            ? const TextStyle(fontSize: 30.0)
+                            : null,
+                      ),
+                      value: selectedOptions.contains(option),
+                      activeColor: Colors.grey,
+                      onChanged: (bool? value) {},
+                    )),
               ],
             ),
           ),
@@ -494,7 +662,7 @@ class _QuizPageState extends State<QuizPage> {
       ),
     );
   }
-
+ */
   void nextSubmit() {
     if (answers[currentIndex] == null) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -502,21 +670,21 @@ class _QuizPageState extends State<QuizPage> {
       ));
       return;
     }
-    if (currentIndex < (testQuestions.length - 1)) {
+    if (currentIndex < (widget.questions.length - 1)) {
       setState(() {
         currentIndex++;
       });
     } else {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (_) =>
-              QuizFinishedPage(questions: testQuestions, answers: answers)));
+              QuizFinishedPage(questions: widget.questions, answers: answers)));
     }
   }
 
   void onTimerExpired() {
     Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (_) =>
-            QuizFinishedPage(questions: testQuestions, answers: answers)));
+            QuizFinishedPage(questions: widget.questions, answers: answers)));
   }
 
   Future<bool> onWillPop() async {

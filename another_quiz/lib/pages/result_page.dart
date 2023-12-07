@@ -21,9 +21,16 @@ class _QuizFinishedPageState extends State<QuizFinishedPage> {
   @override
   Widget build(BuildContext context) {
     int correct = 0;
-    this.widget.answers.forEach((index, value) {
-      if (this.widget.questions[index].correctAnswers == value) correct++;
+
+    /*    widget.answers.forEach((index, value) {
+      if (widget.questions[index].correctAnswers!.contains(value)) correct++;
+    }); */
+
+    widget.answers.forEach((index, value) {
+      if (widget.questions[index].correctAnswers!
+          .every((element) => value.contains(element))) correct++;
     });
+
     const TextStyle titleStyle = TextStyle(
         color: Colors.black87, fontSize: 16.0, fontWeight: FontWeight.w500);
     final TextStyle trailingStyle = TextStyle(

@@ -37,6 +37,7 @@ dependencies:
   flutter_custom_clippers: ^2.1.0
   audioplayers: ^5.2.1
   video_player: ^2.8.1
+  chewie: ^1.7.4
 
 dev_dependencies:
   flutter_test:
@@ -63,8 +64,8 @@ flutter:
   assets:
     - assets/data/
     - assets/audio/
-    - lib/images/
-    - lib/videos/
+    - assets/images/
+    - assets/videos/
 
   #   - images/a_dot_ham.jpeg
 
