@@ -5,7 +5,7 @@ class Question {
   final Type? type;
   final String? question;
   final String? path;
-  final List<dynamic>? correctAnswer;
+  final List<dynamic>? correctAnswers;
   final List<dynamic>? incorrectAnswers;
 
   Question(
@@ -13,14 +13,14 @@ class Question {
       this.type,
       this.path,
       this.question,
-      this.correctAnswer,
+      this.correctAnswers,
       this.incorrectAnswers});
 
   Question.fromMap(Map<String, dynamic> data)
-      : categoryName = data["category"],
-        type = data["type"] == "multiple"
+      : categoryName = data["categoryName"] as String?,
+        type = data["type"] == "multipleChoices"
             ? Type.multipleChoices
-            : (data["type"] == "multipleResponse")
+            : (data["type"] == "multipleResponses")
                 ? Type.multipleResponses
                 : (data["type"] == "picture")
                     ? Type.picture
@@ -29,10 +29,10 @@ class Question {
                         : (data["type"] == "audio")
                             ? Type.audio
                             : null,
-        path = data["path"],
-        question = data["question"],
-        correctAnswer = data["correct_answer"],
-        incorrectAnswers = data["incorrect_answers"];
+        path = data["path"] as String?,
+        question = data["question"] as String?,
+        correctAnswers = data["correctAnswers"] as List<dynamic>?,
+        incorrectAnswers = data["incorrectAnswers"] as List<dynamic>?;
 
   static List<Question> fromData(List<Map<String, dynamic>> data) {
     return data.map((question) => Question.fromMap(question)).toList();

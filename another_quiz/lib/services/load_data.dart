@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:another_quiz/models/question.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 Future<List<Question>> getQuestionsFromFile(String path) async {
   final String response = await rootBundle.loadString(path);

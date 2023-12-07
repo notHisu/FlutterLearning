@@ -19,7 +19,10 @@ class IntroPage extends StatelessWidget {
             //Title
             const Text(
               'QUIZZ',
-              style: TextStyle(color: Colors.white, fontSize: 28),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 25),

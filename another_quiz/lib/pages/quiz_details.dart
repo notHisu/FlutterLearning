@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 
 class QuizDetailsPage extends StatefulWidget {
   final Category selectedCategory;
-  final List<Question> listQuestions;
+  final List<Question> questions;
 
   const QuizDetailsPage({
     super.key,
     required this.selectedCategory,
-    required this.listQuestions,
+    required this.questions,
   });
 
   @override
@@ -88,9 +88,9 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: widget.listQuestions.length,
+                      itemCount: widget.questions.length,
                       itemBuilder: (context, index) {
-                        final question = widget.listQuestions[index];
+                        final question = widget.questions[index];
                         return Container(
                           margin: const EdgeInsets.symmetric(vertical: 10),
                           child: Text(
@@ -120,8 +120,8 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
       context: context,
       builder: (sheetContext) => BottomSheet(
         builder: (_) => QuizOptionsDialog(
+          questions: widget.questions,
           category: selectedCategory,
-          questions: widget.listQuestions,
         ),
         onClosing: () {},
       ),

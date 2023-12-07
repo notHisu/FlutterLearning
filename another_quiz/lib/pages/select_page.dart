@@ -39,6 +39,7 @@ class _SelectPageState extends State<SelectPage> {
             return GestureDetector(
               onTap: () {
                 loadQuestionThenNavigate(category);
+                //navigateToQuizDetails(category, questions);
               },
               child: Container(
                 padding: const EdgeInsets.all(20),
@@ -89,17 +90,17 @@ class _SelectPageState extends State<SelectPage> {
   }
 
   void loadQuestionThenNavigate(Category category) async {
-    final listQuestions = await getQuestionsFromFile(category.questionPath);
-    await navigateToQuizDetails(category, listQuestions);
+    final questions = await getQuestionsFromFile(category.questionPath);
+    await navigateToQuizDetails(category, questions);
   }
 
-  navigateToQuizDetails(Category category, List<Question> listQuestions) {
+  navigateToQuizDetails(Category category, List<Question> questions) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => QuizDetailsPage(
           selectedCategory: category,
-          listQuestions: listQuestions,
+          questions: questions,
         ),
       ),
     );

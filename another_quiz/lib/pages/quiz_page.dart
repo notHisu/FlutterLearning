@@ -32,7 +32,7 @@ class _QuizPageState extends State<QuizPage> {
         categoryName: "Entertainment: Video Games",
         type: Type.multipleChoices,
         question: "What was the first game to be released on the Xbox 360?",
-        correctAnswer: [
+        correctAnswers: [
           "Call of Duty 2"
         ],
         incorrectAnswers: [
@@ -41,13 +41,23 @@ class _QuizPageState extends State<QuizPage> {
           "Kameo: Elements of Power"
         ]),
 
-/*     // Multiple Responses
+    // Multiple Responses
     Question(
         categoryName: "Science: Biology",
         type: Type.multipleResponses,
         question: "What are the four major macromolecules essential for life?",
-        correctAnswer: ["Carbohydrates", "Lipids", "Proteins", "Nucleic acids"],
-        incorrectAnswers: ["Vitamins", "Minerals", "Water", "Enzymes"]), */
+        correctAnswers: [
+          "Carbohydrates",
+          "Lipids",
+          "Proteins",
+          "Nucleic acids"
+        ],
+        incorrectAnswers: [
+          "Vitamins",
+          "Minerals",
+          "Water",
+          "Enzymes"
+        ]),
 
     // Video
     Question(
@@ -56,7 +66,7 @@ class _QuizPageState extends State<QuizPage> {
         path: 'lib/videos/test.mp4',
         question:
             "Watch the video of the heart beating and identify the different parts of the heart.",
-        correctAnswer: [
+        correctAnswers: [
           "Answer"
         ],
         incorrectAnswers: [
@@ -72,7 +82,7 @@ class _QuizPageState extends State<QuizPage> {
         path:
             "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Earth%27s_Location_in_the_Universe_SMALLER_%28JPEG%29.jpg/1280px-Earth%27s_Location_in_the_Universe_SMALLER_%28JPEG%29.jpg",
         question: "Identify the painting 'The Kiss' by Gustav Klimt.",
-        correctAnswer: [
+        correctAnswers: [
           "Something"
         ],
         incorrectAnswers: [
@@ -88,7 +98,7 @@ class _QuizPageState extends State<QuizPage> {
         path: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         question:
             "Listen to the song 'Imagine' by John Lennon and identify the artist.",
-        correctAnswer: ["John Lennon"],
+        correctAnswers: ["John Lennon"],
         incorrectAnswers: ["The Beatles", "Paul McCartney", "George Harrison"]),
   ];
 
@@ -102,10 +112,11 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
-    Question question = testQuestions[currentIndex];
-
+    //Question question = testQuestions[currentIndex];
+    Question question = widget.questions[currentIndex];
+    //print(question);
     final List<dynamic> options = question.incorrectAnswers!;
-    for (final dynamic item in question.correctAnswer!) {
+    for (final dynamic item in question.correctAnswers!) {
       if (!options.contains(item)) {
         options.add(item);
         options.shuffle();
@@ -141,8 +152,8 @@ class _QuizPageState extends State<QuizPage> {
                 switch (question.type) {
                   Type.multipleChoices =>
                     multipleChoices(context, question, options),
-                  Type.multipleResponses =>
-                    multipleResponses(context, question, options),
+                  //Type.multipleResponses =>
+                  // multipleResponses(context, question, options),
                   Type.picture => picture(context, question, options),
                   Type.video => video(context, question, options),
                   Type.audio => audio(context, question, options),
@@ -236,8 +247,16 @@ class _QuizPageState extends State<QuizPage> {
 
   Widget multipleResponses(
       BuildContext context, Question question, List<dynamic> options) {
-    final List<int> selectedOptions = [];
-    final List<bool> checkBoxValue = List.filled(options.length, false);
+    Map<dynamic, bool> listToMap(List<dynamic> list) {
+      final Map<dynamic, bool> map = {};
+      for (final dynamic item in list) {
+        map[item] = false;
+      }
+      return map;
+    }
+
+    Map<dynamic, bool> optionsMap = listToMap(options);
+    List<dynamic> selectedOptions = [];
 
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -264,24 +283,29 @@ class _QuizPageState extends State<QuizPage> {
           const SizedBox(height: 20.0),
           Card(
             child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                ...options.map((option) => RadioListTile(
-                      title: Text(
-                        '$option',
-                        style: MediaQuery.of(context).size.width > 800
-                            ? const TextStyle(fontSize: 30.0)
-                            : null,
-                      ),
-                      groupValue: answers[currentIndex],
-                      value: option,
-                      activeColor: Colors.grey,
-                      onChanged: (dynamic value) {
+              children: [
+                ListView(
+                  shrinkWrap: true,
+                  children: optionsMap.entries.map((entry) {
+                    final key = entry.key;
+                    final value = entry.value;
+                    return CheckboxListTile(
+                      title: Text(key),
+                      value: value,
+                      onChanged: (newValue) {
                         setState(() {
-                          answers[currentIndex] = option;
+                          optionsMap[key] = newValue!;
+                          if (newValue) {
+                            selectedOptions.add(key);
+                          } else {
+                            selectedOptions.remove(key);
+                          }
+                          answers[currentIndex] = selectedOptions;
                         });
                       },
-                    )),
+                    );
+                  }).toList(),
+                ),
               ],
             ),
           ),

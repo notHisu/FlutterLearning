@@ -3,7 +3,7 @@
     "categoryName": "Theme 1: Exploration of the Cosmos",
     "type": "multipleChoices",
     "question": "What is the closest star to our solar system?",
-    "correctAnswer": ["Proxima Centauri"],
+    "correctAnswers": ["Proxima Centauri"],
     "incorrectAnswers": ["Sirius", "Betelgeuse", "Alpha Centauri"]
   },
   {
@@ -18,7 +18,7 @@
     "type": "picture",
     "path": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Earth%27s_Location_in_the_Universe_SMALLER_%28JPEG%29.jpg/1280px-Earth%27s_Location_in_the_Universe_SMALLER_%28JPEG%29.jpg",
     "question": "Identify the constellation Ursa Major (the Great Bear).",
-    "correctAnswer": ["This the the correct answer"],
+    "correctAnswers": ["This the the correct answer"],
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
   },
   {
@@ -26,7 +26,7 @@
     "type": "video",
     "path": "https://www.youtube.com/embed/0rHUDWjR5gg",
     "question": "Explain the formation of stars and planets.",
-    "correctAnswer": ["Nothing here hehe"],
+    "correctAnswers": ["Nothing here hehe"],
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
   },
   {
@@ -34,7 +34,7 @@
     "type": "audio",
     "path": "https://www.nasa.gov/mp3/640149main_20121126_128k.mp3",
     "question": "Listen to a recording of the sounds of Jupiter's.",
-    "correctAnswer": "Nothing here hehe",
+    "correctAnswers": "Nothing here hehe",
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
   }
 ]

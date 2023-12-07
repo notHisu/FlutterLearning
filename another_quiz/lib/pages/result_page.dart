@@ -22,7 +22,7 @@ class _QuizFinishedPageState extends State<QuizFinishedPage> {
   Widget build(BuildContext context) {
     int correct = 0;
     this.widget.answers.forEach((index, value) {
-      if (this.widget.questions[index].correctAnswer == value) correct++;
+      if (this.widget.questions[index].correctAnswers == value) correct++;
     });
     const TextStyle titleStyle = TextStyle(
         color: Colors.black87, fontSize: 16.0, fontWeight: FontWeight.w500);

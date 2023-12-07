@@ -61,14 +61,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/data/
     - assets/audio/
     - lib/images/
     - lib/videos/
-    - lib/data/theme1.json
-    - lib/data/theme2.json
-    - lib/data/theme3.json
-    - lib/data/theme4.json
-    - lib/data/theme5.json
 
   #   - images/a_dot_ham.jpeg
 

@@ -1,14 +1,17 @@
 import 'package:another_quiz/models/category.dart';
 import 'package:another_quiz/models/question.dart';
+import 'package:another_quiz/pages/error_page.dart';
 import 'package:another_quiz/pages/quiz_page.dart';
+import 'package:another_quiz/services/load_data.dart';
 import 'package:another_quiz/theme/color.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class QuizOptionsDialog extends StatefulWidget {
-  final List<Question> questions;
+  final List<Question>? questions;
   final Category? category;
 
-  const QuizOptionsDialog({Key? key, required this.questions, this.category})
+  const QuizOptionsDialog({Key? key, this.questions, this.category})
       : super(key: key);
 
   @override
@@ -111,20 +114,48 @@ class _QuizOptionsDialogState extends State<QuizOptionsDialog> {
     });
   }
 
-  void startQuiz() {
+  void startQuiz() async {
     setState(() {
       processing = true;
     });
+    try {
+      List<Question> questions =
+          await getQuestionsFromFile(widget.category!.questionPath);
 
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (_) => QuizPage(
-                  questions: widget.questions,
-                  category: widget.category,
-                  timeLimit: timeLimit!,
+      if (!mounted) return;
+      if (questions.length < 1) {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => const ErrorPage(
+                  message:
+                      "There are not enough questions in the category, with the options you selected.",
                 )));
-
+        return;
+      }
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (_) => QuizPage(
+                    questions: questions,
+                    category: widget.category,
+                    timeLimit: timeLimit!,
+                  )));
+    } on SocketException catch (_) {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (_) => const ErrorPage(
+                    message:
+                        "Can't reach the servers, \n Please check your internet connection.",
+                  )));
+    } catch (e) {
+      print(e.toString());
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+              builder: (_) => const ErrorPage(
+                    message: "Unexpected error trying to connect to the API",
+                  )));
+    }
     setState(() {
       processing = false;
     });
