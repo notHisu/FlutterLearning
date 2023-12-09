@@ -33,55 +33,50 @@ class IntroPage extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(height: 25),
-
               // Image
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Image.asset(
-                  'assets/images/quiz.png',
-                  width: 400,
-                  height: 400,
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Image.asset(
+                    'assets/images/quiz.png',
+                  ),
                 ),
               ),
 
               // Intro text
-              Expanded(
-                child: Center(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(20)),
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(height: 10),
-                        // Main text
-                        Text(
-                          'Interesting QUIZ Awaits You',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 31, 85, 20),
-                            fontSize: 44,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-
-                        // Sub text
-                        Text(
-                          'Unleash Your Knowledge, Ignite Your Mind',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 16,
-                          ),
-                        ),
-
-                        SizedBox(
-                          height: 25,
-                        )
-                      ],
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(20)),
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(height: 10),
+                    // Main text
+                    Text(
+                      'Interesting QUIZ Awaits You',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 31, 85, 20),
+                        fontSize: 44,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                  ),
+
+                    // Sub text
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Unleash Your Knowledge, \nIgnite Your Mind',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
                 ),
               ),
 

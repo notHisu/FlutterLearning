@@ -57,7 +57,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   @override
   void dispose() {
     _positionTimer?.cancel();
-    player.dispose();
+    //player.dispose();
     super.dispose();
   }
 
