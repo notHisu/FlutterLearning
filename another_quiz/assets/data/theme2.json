@@ -24,6 +24,7 @@
   {
     "categoryName": "Theme 2: Unraveling the Mysteries of Life",
     "type": "video",
+    "path": "assets/videos/test.mp4",
     "question": "Explain the process of photosynthesis.",
     "correctAnswers": ["Nothing here hehe"],
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]
@@ -31,6 +32,7 @@
   {
     "categoryName": "Theme 2: Unraveling the Mysteries of Life",
     "type": "audio",
+    "path": "assets/audio/sample.mp3",
     "question": "Listen to a recording of the heartbeat of a human embryo.",
     "correctAnswers": ["Nothing here hehe"],
     "incorrectAnswers": ["I don't know hehe", "What is this", "Oh no"]

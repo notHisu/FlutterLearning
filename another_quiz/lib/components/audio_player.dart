@@ -1,95 +1,116 @@
+import 'dart:async';
+
 import 'package:another_quiz/theme/color.dart';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:just_audio/just_audio.dart';
 
 class AudioPlayerWidget extends StatefulWidget {
-  final String audioUrl;
-
-  const AudioPlayerWidget({Key? key, required this.audioUrl}) : super(key: key);
+  final String audioPath;
+  AudioPlayerWidget({Key? key, required this.audioPath}) : super(key: key);
 
   @override
-  State<AudioPlayerWidget> createState() => _AudioPlayerWidgetState();
+  _AudioPlayerWidgetState createState() => _AudioPlayerWidgetState();
 }
 
 class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
-  late AudioPlayer player;
-  late Future<void> _initializeFuture;
+  final player = AudioPlayer();
+  Duration duration = Duration.zero;
+  Duration position = Duration.zero;
   bool isPlaying = false;
+  Timer? _positionTimer;
 
   @override
   void initState() {
     super.initState();
-    // Create the audio player.
-    player = AudioPlayer();
+    player.setAsset(widget.audioPath);
 
-    // Initialize the audio player. This will return a Future that completes
-    // when the audio file is loaded and ready to play.
-    _initializeFuture = player.setSource(AssetSource(widget.audioUrl));
+    player.playingStream.listen((playing) {
+      setState(() {
+        isPlaying = playing;
+      });
+      if (playing) {
+        _positionTimer?.cancel();
+        _positionTimer =
+            Timer.periodic(const Duration(milliseconds: 100), (timer) {
+          setState(() {
+            position = player.position;
+          });
+        });
+      } else {
+        _positionTimer?.cancel();
+      }
+    });
+
+    player.durationStream.listen((duration) {
+      setState(() {
+        this.duration = duration!;
+      });
+    });
+
+    player.positionStream.listen((position) {
+      setState(() {
+        this.position = position;
+      });
+    });
   }
 
   @override
   void dispose() {
-    // Dispose of the player when the widget is disposed.
+    _positionTimer?.cancel();
     player.dispose();
     super.dispose();
   }
 
-  void playAudio() async {
-    await _initializeFuture;
-    await player.play(AssetSource(widget.audioUrl));
-    setState(() {
-      isPlaying = true;
-    });
-  }
-
-  void pauseAudio() async {
-    await player.pause();
-    setState(() {
-      isPlaying = false;
-    });
-  }
-
-  void resumeAudio() async {
-    await player.resume();
-    setState(() {
-      isPlaying = true;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: _initializeFuture,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        } else {
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(width: 16.0),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                ),
-                onPressed: isPlaying ? pauseAudio : playAudio,
-                child: isPlaying
-                    ? const Icon(Icons.pause)
-                    : const Icon(Icons.play_arrow),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(formatTime(position)),
+                  Slider(
+                      min: 0,
+                      max: duration.inSeconds.toDouble(),
+                      value: position.inSeconds.toDouble(),
+                      onChanged: (value) async {
+                        await player.seek(Duration(seconds: value.toInt()));
+                      }),
+                  Text(formatTime(duration - position)),
+                ],
               ),
-              const SizedBox(width: 16.0),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                ),
-                onPressed: resumeAudio,
-                child: const Icon(Icons.repeat),
-              ),
-              const SizedBox(width: 16.0),
-            ],
-          );
-        }
-      },
+            ),
+            CircleAvatar(
+                backgroundColor: primaryColor,
+                child: IconButton(
+                  icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
+                  onPressed: () async {
+                    if (isPlaying) {
+                      await player.pause();
+                    } else {
+                      await player.play();
+                    }
+                  },
+                )),
+          ],
+        ),
+        const SizedBox(height: 20),
+      ],
     );
+  }
+
+  String formatTime(Duration duration) {
+    String twoDigits(int n) => n.toString().padLeft(2, '0');
+    final hours = twoDigits(duration.inHours);
+    final minutes = twoDigits(duration.inMinutes.remainder(60));
+    final seconds = twoDigits(duration.inSeconds.remainder(60));
+
+    return [if (duration.inHours > 0) hours, minutes, seconds].join(':');
   }
 }

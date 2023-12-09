@@ -147,235 +147,285 @@ class _QuizPageState extends State<QuizPage> {
           elevation: 0,
           backgroundColor: Colors.transparent,
         ),
-        body: Stack(
-          children: <Widget>[
-            ClipPath(
-              clipper: WaveClipperTwo(),
-              child: Container(
-                decoration: BoxDecoration(color: secondaryColor),
-                height: 350,
-              ),
-            ),
-            Column(
-              children: [
-                TimerWidget(
-                    timeLimit: widget.timeLimit,
-                    onTimerExpired: onTimerExpired),
-
-                // Switch between question types
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          CircleAvatar(
-                            backgroundColor: Colors.white70,
-                            child: Text("${currentIndex + 1}"),
-                          ),
-                          const SizedBox(width: 16.0),
-                          Expanded(
-                            child: Text(
-                              question.question!,
-                              softWrap: true,
-                              style: MediaQuery.of(context).size.width > 800
-                                  ? questionStyle.copyWith(fontSize: 30.0)
-                                  : questionStyle,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20.0),
-
-                      // Switch between question types
-                      if (question.type == Type.multipleChoices)
-                        Card(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ...options.map((option) => RadioListTile(
-                                    title: Text(
-                                      '$option',
-                                      style: MediaQuery.of(context).size.width >
-                                              800
-                                          ? const TextStyle(fontSize: 30.0)
-                                          : null,
-                                    ),
-                                    groupValue: answers[currentIndex],
-                                    value: option,
-                                    activeColor: Colors.grey,
-                                    onChanged: (dynamic value) {
-                                      setState(() {
-                                        answers[currentIndex] = option;
-                                      });
-                                    },
-                                  )),
-                            ],
-                          ),
-                        )
-                      else if (question.type == Type.multipleResponses)
-                        Card(
-                          child: ListBody(
-                            children: [
-                              ...options
-                                  .map((option) => CheckboxListTile(
-                                        title: Text(
-                                          '$option',
-                                          style: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  800
-                                              ? const TextStyle(fontSize: 30.0)
-                                              : null,
-                                        ),
-                                        activeColor: Colors.grey,
-                                        controlAffinity:
-                                            ListTileControlAffinity.leading,
-                                        value: selectedOptions.contains(option),
-                                        onChanged: (isChecked) =>
-                                            onSelectedOption(
-                                                option, isChecked!),
-                                      ))
-                                  .toList(),
-                            ],
-                          ),
-                        )
-                      else if (question.type == Type.picture)
-                        Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                question.path!,
-                              ),
-                            ),
-                            const SizedBox(height: 10),
-                            Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ...options.map((option) => RadioListTile(
-                                        title: Text(
-                                          '$option',
-                                          style: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  800
-                                              ? const TextStyle(fontSize: 30.0)
-                                              : null,
-                                        ),
-                                        groupValue: answers[currentIndex],
-                                        value: option,
-                                        activeColor: Colors.grey,
-                                        onChanged: (dynamic value) {
-                                          setState(() {
-                                            answers[currentIndex] = option;
-                                          });
-                                        },
-                                      )),
-                                ],
-                              ),
-                            ),
-                          ],
-                        )
-                      else if (question.type == Type.video)
-                        Column(
-                          children: [
-                            SizedBox(
-                              height: 300,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: ChewieListItem(
-                                    videoPlayerController:
-                                        VideoPlayerController.asset(
-                                            question.path!),
-                                    looping: true),
-                              ),
-                            ),
-                            Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ...options.map((option) => RadioListTile(
-                                        title: Text(
-                                          '$option',
-                                          style: MediaQuery.of(context)
-                                                      .size
-                                                      .width >
-                                                  800
-                                              ? const TextStyle(fontSize: 30.0)
-                                              : null,
-                                        ),
-                                        groupValue: answers[currentIndex],
-                                        value: option,
-                                        activeColor: Colors.grey,
-                                        onChanged: (dynamic value) {
-                                          setState(() {
-                                            answers[currentIndex] = option;
-                                          });
-                                        },
-                                      )),
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      else
-                        Card(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ...options.map((option) => RadioListTile(
-                                    title: Text(
-                                      '$option',
-                                      style: MediaQuery.of(context).size.width >
-                                              800
-                                          ? const TextStyle(fontSize: 30.0)
-                                          : null,
-                                    ),
-                                    groupValue: answers[currentIndex],
-                                    value: option,
-                                    activeColor: Colors.grey,
-                                    onChanged: (dynamic value) {
-                                      setState(() {
-                                        answers[currentIndex] = option;
-                                      });
-                                    },
-                                  )),
-                            ],
-                          ),
-                        ),
-                    ],
-                  ),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [primaryColor, secondaryColor],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter)),
+          child: Stack(
+            children: <Widget>[
+              ClipPath(
+                clipper: WaveClipperTwo(),
+                child: Container(
+                  decoration: BoxDecoration(color: secondaryColor),
+                  height: 350,
                 ),
+              ),
+              Column(
+                children: [
+                  TimerWidget(
+                      timeLimit: widget.timeLimit,
+                      onTimerExpired: onTimerExpired),
 
-                Expanded(
-                  child: Container(
+                  // Switch between question types
+                  Padding(
                     padding: const EdgeInsets.all(20.0),
-                    alignment: Alignment.bottomCenter,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        padding: MediaQuery.of(context).size.width > 800
-                            ? const EdgeInsets.symmetric(
-                                vertical: 20.0, horizontal: 64.0)
-                            : null,
-                        backgroundColor: buttonColor,
-                      ),
-                      onPressed: nextSubmit,
-                      child: Text(
-                        currentIndex == (widget.questions.length - 1)
-                            ? "Submit"
-                            : "Next",
-                        style: MediaQuery.of(context).size.width > 800
-                            ? const TextStyle(fontSize: 30.0)
-                            : null,
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            CircleAvatar(
+                              backgroundColor: Colors.white70,
+                              child: Text("${currentIndex + 1}"),
+                            ),
+                            const SizedBox(width: 16.0),
+                            Expanded(
+                              child: Text(
+                                question.question!,
+                                softWrap: true,
+                                style: MediaQuery.of(context).size.width > 800
+                                    ? questionStyle.copyWith(fontSize: 30.0)
+                                    : questionStyle,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20.0),
+
+                        // Switch between question types
+                        if (question.type == Type.multipleChoices)
+                          Card(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ...options.map((option) => RadioListTile(
+                                      title: Text(
+                                        '$option',
+                                        style: MediaQuery.of(context)
+                                                    .size
+                                                    .width >
+                                                800
+                                            ? const TextStyle(fontSize: 30.0)
+                                            : null,
+                                      ),
+                                      groupValue: answers[currentIndex],
+                                      value: option,
+                                      activeColor: Colors.grey,
+                                      onChanged: (dynamic value) {
+                                        setState(() {
+                                          answers[currentIndex] = option;
+                                        });
+                                      },
+                                    )),
+                              ],
+                            ),
+                          )
+                        else if (question.type == Type.multipleResponses)
+                          Card(
+                            child: ListBody(
+                              children: [
+                                ...options
+                                    .map((option) => CheckboxListTile(
+                                          title: Text(
+                                            '$option',
+                                            style: MediaQuery.of(context)
+                                                        .size
+                                                        .width >
+                                                    800
+                                                ? const TextStyle(
+                                                    fontSize: 30.0)
+                                                : null,
+                                          ),
+                                          activeColor: Colors.grey,
+                                          controlAffinity:
+                                              ListTileControlAffinity.leading,
+                                          value:
+                                              selectedOptions.contains(option),
+                                          onChanged: (isChecked) =>
+                                              onSelectedOption(
+                                                  option, isChecked!),
+                                        ))
+                                    .toList(),
+                              ],
+                            ),
+                          )
+                        else if (question.type == Type.picture)
+                          Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.network(
+                                  question.path!,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              Card(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    ...options.map((option) => RadioListTile(
+                                          title: Text(
+                                            '$option',
+                                            style: MediaQuery.of(context)
+                                                        .size
+                                                        .width >
+                                                    800
+                                                ? const TextStyle(
+                                                    fontSize: 30.0)
+                                                : null,
+                                          ),
+                                          groupValue: answers[currentIndex],
+                                          value: option,
+                                          activeColor: Colors.grey,
+                                          onChanged: (dynamic value) {
+                                            setState(() {
+                                              answers[currentIndex] = option;
+                                            });
+                                          },
+                                        )),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          )
+                        else if (question.type == Type.video)
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: 270,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: ChewieListItem(
+                                      videoPlayerController:
+                                          VideoPlayerController.asset(
+                                              question.path!),
+                                      looping: true),
+                                ),
+                              ),
+                              Card(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    ...options.map((option) => RadioListTile(
+                                          title: Text(
+                                            '$option',
+                                            style: MediaQuery.of(context)
+                                                        .size
+                                                        .width >
+                                                    800
+                                                ? const TextStyle(
+                                                    fontSize: 30.0)
+                                                : null,
+                                          ),
+                                          groupValue: answers[currentIndex],
+                                          value: option,
+                                          activeColor: Colors.grey,
+                                          onChanged: (dynamic value) {
+                                            setState(() {
+                                              answers[currentIndex] = option;
+                                            });
+                                          },
+                                        )),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        else if (question.type == Type.audio)
+                          Column(
+                            children: [
+                              AudioPlayerWidget(audioPath: question.path!),
+                              Card(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    ...options.map((option) => RadioListTile(
+                                          title: Text(
+                                            '$option',
+                                            style: MediaQuery.of(context)
+                                                        .size
+                                                        .width >
+                                                    800
+                                                ? const TextStyle(
+                                                    fontSize: 30.0)
+                                                : null,
+                                          ),
+                                          groupValue: answers[currentIndex],
+                                          value: option,
+                                          activeColor: Colors.grey,
+                                          onChanged: (dynamic value) {
+                                            setState(() {
+                                              answers[currentIndex] = option;
+                                            });
+                                          },
+                                        )),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        else
+                          Card(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ...options.map((option) => RadioListTile(
+                                      title: Text(
+                                        '$option',
+                                        style: MediaQuery.of(context)
+                                                    .size
+                                                    .width >
+                                                800
+                                            ? const TextStyle(fontSize: 30.0)
+                                            : null,
+                                      ),
+                                      groupValue: answers[currentIndex],
+                                      value: option,
+                                      activeColor: Colors.grey,
+                                      onChanged: (dynamic value) {
+                                        setState(() {
+                                          answers[currentIndex] = option;
+                                        });
+                                      },
+                                    )),
+                              ],
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.all(20.0),
+                      alignment: Alignment.bottomCenter,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: MediaQuery.of(context).size.width > 800
+                              ? const EdgeInsets.symmetric(
+                                  vertical: 20.0, horizontal: 64.0)
+                              : null,
+                          backgroundColor: buttonColor,
+                        ),
+                        onPressed: nextSubmit,
+                        child: Text(
+                          currentIndex == (widget.questions.length - 1)
+                              ? "Submit"
+                              : "Next",
+                          style: MediaQuery.of(context).size.width > 800
+                              ? const TextStyle(fontSize: 30.0)
+                              : null,
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

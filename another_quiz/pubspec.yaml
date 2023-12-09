@@ -38,6 +38,15 @@ dependencies:
   audioplayers: ^5.2.1
   video_player: ^2.8.1
   chewie: ^1.7.4
+  chewie_audio: ^1.5.0
+  just_audio: ^0.9.36
+  rxdart: ^0.27.7
+  audioplayers_web: ^4.1.0
+  audio_session: ^0.1.14
+  just_audio_mpv: ^0.1.6
+  just_audio_windows: ^0.2.0
+  # Other platform implementations below:
+  # just_audio_libwinmedia: ^0.0.4
 
 dev_dependencies:
   flutter_test:

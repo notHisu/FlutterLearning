@@ -27,10 +27,19 @@ class CheckAnswersPage extends StatelessWidget {
           "Check Answers",
         ),
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16.0),
-        itemCount: questions.length + 1,
-        itemBuilder: _buildItem,
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [primaryColor, secondaryColor],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
+        width: double.infinity,
+        height: double.infinity,
+        child: ListView.builder(
+          padding: const EdgeInsets.all(16.0),
+          itemCount: questions.length + 1,
+          itemBuilder: _buildItem,
+        ),
       ),
     );
   }

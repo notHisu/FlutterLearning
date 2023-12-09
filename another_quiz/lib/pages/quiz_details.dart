@@ -37,81 +37,90 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
           widget.selectedCategory.name.substring(0, 7),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Image
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(widget.selectedCategory.displayPicturePath),
-            ),
-
-            const SizedBox(height: 20),
-
-            // Title
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)),
-                child: SingleChildScrollView(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Title
-                    Text(
-                      widget.selectedCategory.name,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-
-                    // About
-                    Text(
-                      widget.selectedCategory.description,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey,
-                      ),
-                      textAlign: TextAlign.justify,
-                    ),
-
-                    const SizedBox(height: 10),
-
-                    // List of questions
-                    ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: widget.questions.length,
-                      itemBuilder: (context, index) {
-                        final question = widget.questions[index];
-                        return Container(
-                          margin: const EdgeInsets.symmetric(vertical: 10),
-                          child: Text(
-                            '${index + 1}. ${question.question}',
-                            style: const TextStyle(fontSize: 14),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
-                )),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [primaryColor, secondaryColor],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Image
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(widget.selectedCategory.displayPicturePath),
               ),
-            ),
 
-            const SizedBox(height: 10),
+              const SizedBox(height: 20),
 
-            // Continue button
-            MyButton(
-                text: "Begin",
-                onTap: () => categoryPressed(context, widget.selectedCategory)),
-          ],
+              // Title
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: SingleChildScrollView(
+                      child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title
+                      Text(
+                        widget.selectedCategory.name,
+                        style: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // About
+                      Text(
+                        widget.selectedCategory.description,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+
+                      const SizedBox(height: 10),
+
+                      // List of questions
+                      ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: widget.questions.length,
+                        itemBuilder: (context, index) {
+                          final question = widget.questions[index];
+                          return Container(
+                            margin: const EdgeInsets.symmetric(vertical: 10),
+                            child: Text(
+                              '${index + 1}. ${question.question}',
+                              style: const TextStyle(fontSize: 14),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  )),
+                ),
+              ),
+
+              const SizedBox(height: 10),
+
+              // Continue button
+              MyButton(
+                  text: "Begin",
+                  onTap: () =>
+                      categoryPressed(context, widget.selectedCategory)),
+            ],
+          ),
         ),
       ),
     );
