@@ -45,4 +45,11 @@ final List<Category> categories = [
       'assets/images/number-five.png',
       'assets/data/theme5.json',
       'assets/images/theme5.jpg'),
+  Category(
+      5,
+      "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+      "Mô tả của chuyên đề 1",
+      'assets/images/star.png',
+      'assets/data/chuyende1.json',
+      'assets/images/special.jpg'),
 ];
