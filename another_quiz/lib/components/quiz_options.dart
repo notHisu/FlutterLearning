@@ -123,7 +123,7 @@ class _QuizOptionsDialogState extends State<QuizOptionsDialog> {
           await getQuestionsFromFile(widget.category!.questionPath);
 
       if (!mounted) return;
-      if (questions.length < 1) {
+      if (questions.isEmpty) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (_) => const ErrorPage(
                   message:

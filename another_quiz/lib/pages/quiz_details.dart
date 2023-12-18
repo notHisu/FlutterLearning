@@ -42,7 +42,7 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
         width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: [primaryColor, secondaryColor],
+                colors: [primaryColor, primaryColor.withOpacity(0.5)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         child: Padding(

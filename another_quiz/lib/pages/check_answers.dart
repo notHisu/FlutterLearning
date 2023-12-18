@@ -30,7 +30,7 @@ class CheckAnswersPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                colors: [primaryColor, secondaryColor],
+                colors: [primaryColor, primaryColor.withOpacity(0.5)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter)),
         width: double.infinity,

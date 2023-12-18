@@ -31,7 +31,7 @@ class ErrorPage extends StatelessWidget {
           gradient: LinearGradient(
             colors: [
               primaryColor,
-              secondaryColor,
+              primaryColor.withOpacity(0.5),
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,

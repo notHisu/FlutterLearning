@@ -152,7 +152,7 @@ class _QuizPageState extends State<QuizPage> {
           width: double.infinity,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [primaryColor, secondaryColor],
+                  colors: [primaryColor, primaryColor.withOpacity(0.5)],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter)),
           child: Stack(
@@ -255,10 +255,13 @@ class _QuizPageState extends State<QuizPage> {
                         else if (question.type == Type.picture)
                           Column(
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.network(
-                                  question.path!,
+                              SizedBox(
+                                height: 200,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Image.network(
+                                    question.path!,
+                                  ),
                                 ),
                               ),
                               const SizedBox(height: 10),
