@@ -1,0 +1,423 @@
+[
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Theo bạn, dân tộc nào có số lượng đông nhất trong tỉnh Lâm Đồng?",
+    "correctAnswers": ["Cơ Ho"],
+    "incorrectAnswers": ["Mạ", "Chu Ru", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Dân tộc nào tập trung nhiều ở thành phố Bảo Lộc và Bảo Lâm?",
+    "correctAnswers": ["Mạ"],
+    "incorrectAnswers": ["Cơ Ho", "Chu Ru", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Ngôn ngữ nào được sử dụng bởi người thuộc dân tộc Chu Ru?",
+    "correctAnswers": ["Ma-lay-ô – Po-ly-nê-xi-a"],
+    "incorrectAnswers": ["Môn – Khmer", "Tiếng Chăm", "Ngữ hệ Nam Á"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Dân tộc nào sử dụng công cụ làm rẫy như rìu, xà gạc, dao và gậy chọc lỗ?",
+    "correctAnswers": ["Mạ"],
+    "incorrectAnswers": ["Cơ Ho", "Chu Ru", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Người Cơ Ho thường trồng những loại cây nào chủ yếu?",
+    "correctAnswers": ["Lúa"],
+    "incorrectAnswers": ["Ngô", "Bắp", "Sắn"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Dân tộc nào có số lượng đông nhất ở huyện Đơn Dương và Đức Trọng?",
+    "correctAnswers": ["Chu Ru"],
+    "incorrectAnswers": ["Cơ Ho", "Mạ", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Người Cơ Ho thường sử dụng gia súc và gia cầm để làm gì?",
+    "correctAnswers": ["Hiến tế trong các lễ nghi"],
+    "incorrectAnswers": ["Nông nghiệp", "Đánh cá", "Săn bắn"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Dân tộc nào thuộc nhóm ngôn ngữ Môn – Khmer?",
+    "correctAnswers": ["Cơ Ho"],
+    "incorrectAnswers": ["Mạ", "Chu Ru", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Người Mạ thường sử dụng công cụ nào khi làm rẫy?",
+    "correctAnswers": ["Rìu"],
+    "incorrectAnswers": ["Xà gạc", "Gậy chọc lỗ", "Dao"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Dân tộc nào tập trung nhiều ở các huyện Di Linh, Lâm Hà, Đam Rông?",
+    "correctAnswers": ["Cơ Ho"],
+    "incorrectAnswers": ["Mạ", "Chu Ru", "Xrê"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Nhà ở truyền thống của người Mạ thường có điều gì đặc biệt?",
+    "correctAnswers": ["Có nơi thiêng liêng để thờ các vật thiêng"],
+    "incorrectAnswers": [
+      "Sàn nhà thấp",
+      "Dùng lá rsồi để lợp nhà",
+      "Được nối dài khi thành viên trong nhà kết hôn"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trang phục truyền thống của người Mạ thường có những đặc điểm gì?",
+    "correctAnswers": [
+      "Tóc dài búi sau gáy",
+      "Áo chui đầu, xẻ tà, vạt sau dài hơn vạt trước"
+    ],
+    "incorrectAnswers": [
+      "Mặc áo đóng khố",
+      "Áo nữ không xẻ tà",
+      "Váy trắng trên nền chàm"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Loại trang phục nào được nam giới Cơ Ho thường mặc?",
+    "correctAnswers": ["Áo đóng khố theo hình chữ T"],
+    "incorrectAnswers": [
+      "Áo sơ mi khoác tấm choàng trắng",
+      "Áo dài màu đen",
+      "Áo nữ vừa sát thân và dài tới thắt lưng"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trang phục truyền thống của người Chu Ru có những đặc điểm nào?",
+    "correctAnswers": [
+      "Áo sơ mi khoác tấm choàng trắng",
+      "Váy màu xanh đen",
+      "Áo dài màu đen"
+    ],
+    "incorrectAnswers": [
+      "Đeo khăn đội đầu",
+      "Mặc áo đóng khố",
+      "Đeo trang sức rất đặc trưng"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Đặc điểm nào được nhắc đến trong văn hoá nhà ở của người Cơ Ho?",
+    "correctAnswers": ["Có sàn nhưng thấp hơn so với các dân tộc khác"],
+    "incorrectAnswers": [
+      "Có nơi thiêng liêng để thờ các vật thiêng",
+      "Nhà dài đến 20-30m",
+      "Sử dụng lá rsồi để lợp nhà"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trong văn hoá nhà ở của người Chu Ru, điều gì được nhắc đến?",
+    "correctAnswers": [
+      "Mỗi đại gia đình thường gồm 3-4 thế hệ chung sống",
+      "Dưới sàn thường là nơi chất củi",
+      "Mỗi nhà trên để ở, nhà dưới làm nhà bếp và nối với nhau bằng Lơnhan"
+    ],
+    "incorrectAnswers": [
+      "Có sàn nhưng thấp hơn so với các dân tộc khác",
+      "Có nơi thiêng liêng để thờ các vật thiêng",
+      "Nhà dài đến 20-30m"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Đặc điểm nào là đặc trưng trong trang phục của người Mạ?",
+    "correctAnswers": ["Tóc dài búi sau gáy"],
+    "incorrectAnswers": [
+      "Áo chui đầu, xẻ tà, vạt sau dài hơn vạt trước",
+      "Mặc áo đóng khố",
+      "Váy trắng trên nền chàm"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trong trang phục truyền thống của người Cơ Ho, điều gì là điển hình?",
+    "correctAnswers": [
+      "Áo nữ mặc vừa sát vào thân và dài tới thắt lưng",
+      "Váy được dệt và trang trí hoa văn hình học màu đỏ, trắng trên nền tối (xanh đen)"
+    ],
+    "incorrectAnswers": [
+      "Áo đóng khố theo hình chữ T",
+      "Tóc dài búi sau gáy",
+      "Áo chui đầu, xẻ tà, vạt sau dài hơn vạt trước"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Trang phục truyền thống của người Chu Ru thường có điều gì đặc biệt?",
+    "correctAnswers": ["Sự giao thoa giữa dân tộc Cơ Ho và dân tộc Chăm"],
+    "incorrectAnswers": [
+      "Áo dài màu đen",
+      "Váy màu xanh đen",
+      "Áo sơ mi khoác tấm choàng trắng"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trong trang phục truyền thống của người Mạ, điều gì là đặc trưng?",
+    "correctAnswers": [
+      "Áo chui đầu, xẻ tà, vạt sau dài hơn vạt trước",
+      "Tóc dài búi sau gáy"
+    ],
+    "incorrectAnswers": [
+      "Mặc áo đóng khố",
+      "Váy trắng trên nền chàm",
+      "Áo nữ không xẻ tà"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Điều gì là tín ngưỡng chung của người Cơ Ho, Mạ và Chu Ru?",
+    "correctAnswers": ["Thờ cúng nhiều vị thần và tổ tiên"],
+    "incorrectAnswers": [
+      "Tôn kính thần linh duy nhất",
+      "Không tin vào thần linh",
+      "Phụ thuộc vào khoa học và công nghệ"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Đặc điểm nào là đúng về tín ngưỡng của người Cơ Ho, Mạ và Chu Ru?",
+    "correctAnswers": [
+      "Thờ cúng thần như thần nhà, thần lúa, thần rừng",
+      "Quan niệm có thần thiện và ác quỷ"
+    ],
+    "incorrectAnswers": [
+      "Không có thần linh trong tín ngưỡng",
+      "Chỉ thờ cúng một vị thần duy nhất"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Phong tục hôn nhân của người Cơ Ho được miêu tả như thế nào?",
+    "correctAnswers": ["Hôn nhân một vợ một chồng và cư trú bên vợ"],
+    "incorrectAnswers": [
+      "Hôn nhân nhiều vợ nhiều chồng",
+      "Chỉ cư trú bên chồng",
+      "Không có phong tục hôn nhân"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Những đặc điểm nào đúng về phong tục hôn nhân của người Mạ?",
+    "correctAnswers": [
+      "Phụ hệ khi con trai đến tuổi trưởng thành để đính hôn",
+      "Chồng có trách nhiệm nộp lễ vật cho nhà gái"
+    ],
+    "incorrectAnswers": [
+      "Hôn nhân không có lễ vật",
+      "Hôn nhân tự do không phụ thuộc vào gia đình"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Phong tục hôn nhân của người Chu Ru được mô tả như thế nào?",
+    "correctAnswers": ["Hôn nhân một vợ một chồng và cư trú bên nhà vợ"],
+    "incorrectAnswers": [
+      "Hôn nhân nhiều vợ nhiều chồng",
+      "Chỉ cư trú bên chồng",
+      "Không có phong tục hôn nhân"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Những phong tục tang lễ đúng đối với người Mạ là gì?",
+    "correctAnswers": [
+      "Thờ cúng và tổ chức ngày rơlô, ngày ràn, ngày tớp",
+      "Chôn cất có thể không xem xét hướng đào huyệt"
+    ],
+    "incorrectAnswers": ["Chỉ có ngày tang", "Không có lễ cúng trong tang lễ"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Phong tục tang lễ của người Chu Ru là gì?",
+    "correctAnswers": ["Tiến hành trong 3 ngày"],
+    "incorrectAnswers": [
+      "Không có phong tục tang lễ",
+      "Chỉ một ngày tang",
+      "Tang lễ kéo dài hơn 3 ngày"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Những đặc điểm nào đúng về phong tục tang lễ của người Cơ Ho?",
+    "correctAnswers": [
+      "Đánh chiêng để báo tin cho cộng đồng",
+      "Thực hiện nghi lễ và đào huyệt sau ngày ràn"
+    ],
+    "incorrectAnswers": [
+      "Không có ngày ràn trong tang lễ",
+      "Không có lễ đào huyệt"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Những đặc điểm nào đúng về phong tục tang lễ của người Chu Ru?",
+    "correctAnswers": [
+      "Người chết được chôn chung một huyệt theo từng gia đình",
+      "Tiến hành trong 3 ngày"
+    ],
+    "incorrectAnswers": [
+      "Không có phong tục tang lễ",
+      "Chỉ một ngày tang",
+      "Tang lễ kéo dài hơn 3 ngày"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Trong tín ngưỡng và phong tục của người Cơ Ho, Mạ và Chu Ru, điều gì là điểm chung?",
+    "correctAnswers": [
+      "Thờ cúng và tôn kính tổ tiên",
+      "Quan niệm về thần linh và cà (ác quỷ)"
+    ],
+    "incorrectAnswers": [
+      "Không có điểm chung nào giữa họ",
+      "Tín ngưỡng chỉ dựa vào khoa học và công nghệ"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Đặc điểm nào là đúng về phong tục hôn nhân của người Mạ?",
+    "correctAnswers": [
+      "Phụ hệ khi con trai đến tuổi trưởng thành để đính hôn",
+      "Chồng có trách nhiệm nộp lễ vật cho nhà gái"
+    ],
+    "incorrectAnswers": [
+      "Hôn nhân không có lễ vật",
+      "Hôn nhân tự do không phụ thuộc vào gia đình"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Lễ hội chủ yếu của người Mạ trong mùa lễ hội là gì?",
+    "correctAnswers": ["Nhô Rơ he (lễ hội mừng lúa mới)"],
+    "incorrectAnswers": [
+      "Nhô năng brê (lễ xem rừng xem đất)",
+      "Nhô tăm snơm (lễ xin thần linh giúp cho hạt lúa lên đều, trổ nhiều bông)",
+      "Ngai bơ thi bốc (lễ bỏ mả, nghi lễ lớn nhất trong vòng đời của một con người)"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Các lễ hội và nghi lễ của người Cơ Ho, Mạ và Chu Ru thường liên quan đến những hoạt động nào?",
+    "correctAnswers": ["Nông nghiệp", "Tôn vinh thần linh"],
+    "incorrectAnswers": ["Công nghiệp hiện đại", "Thể thao và giải trí"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Loại nhạc cụ nào không có trong kho tàng nghệ thuật dân gian của người Cơ Ho?",
+    "correctAnswers": ["Sơgơr"],
+    "incorrectAnswers": [
+      "Bộ cồng chiêng 6 chiếc",
+      "Kèn ống bầu (Kơmbuat)",
+      "Đàn ống tre (Kơrla)"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Những hoạt động nào thường có sự tham gia của nhạc cụ cồng, chiêng trong văn hoá dân gian của các dân tộc thiểu số ở Lâm Đồng?",
+    "correctAnswers": ["Lễ hội", "Cưới hỏi", "Tang lễ", "Mừng năm mới"],
+    "incorrectAnswers": ["Hội nghị kinh tế", "Lễ hội âm nhạc hiện đại"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Lễ cúng thần đập nước Bơmung liên quan đến người dân tộc nào?",
+    "correctAnswers": ["Chu Ru"],
+    "incorrectAnswers": ["Mạ", "Cơ Ho", "Không liên quan đến các dân tộc nào"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Loại hình hát kể đối đáp đặc biệt của người Mạ là gì?",
+    "correctAnswers": ["Tàm-pớt"],
+    "incorrectAnswers": [
+      "Tămya-Aria",
+      "T’rumpô",
+      "Pơt giữa chàng K'Yai và nàng Kông"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Những nghi lễ, lễ hội nào có liên quan đến nông nghiệp trong văn hoá của người Chu Ru?",
+    "correctAnswers": [
+      "Lễ cúng thần đập nước (Bơmung)",
+      "Cúng thần mương nước (Rơ bông)",
+      "Cúng thần lúa khi gieo hạt",
+      "Lễ mừng lúa mới"
+    ],
+    "incorrectAnswers": ["Lễ hội văn hóa đô thị", "Lễ hội thể thao"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Các nhạc cụ truyền thống của người Chu Ru không bao gồm cái gì sau đây?",
+    "correctAnswers": ["Sơgơr"],
+    "incorrectAnswers": ["Trống (sơ gơn)", "Kèn (rơkel)", "R'tông"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleResponses",
+    "question": "Các dịp nào người Mạ thường tổ chức lễ hiến sinh?",
+    "correctAnswers": ["Cưới hỏi", "Sinh đẻ", "Làm nhà mới", "Đau ốm"],
+    "incorrectAnswers": ["Du lịch", "Tham quan", "Học tập"]
+  },
+  {
+    "categoryName": "Chuyên đề 2",
+    "type": "multipleChoices",
+    "question": "Loại nhạc cụ đặc sắc nào không thuộc kho tàng nghệ thuật dân gian của người Cơ Ho?",
+    "correctAnswers": ["R'tông"],
+    "incorrectAnswers": [
+      "Bộ cồng chiêng 6 chiếc",
+      "Kèn ống bầu (Kơmbuat)",
+      "Đàn ống tre (Kơrla)"
+    ]
+  }
+]

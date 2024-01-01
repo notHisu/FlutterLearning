@@ -1,6 +1,6 @@
 [
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "multipleChoices",
     "question": "Theo bạn, yếu tố nào đã thúc đẩy thực dân Pháp tiến hành xâm lược và khám phá Lâm Đồng từ năm 1893?",
     "correctAnswers": [
@@ -13,14 +13,14 @@
     ]
   },
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "multipleResponses",
     "question": "Năm 1893, ai được giao nhiệm vụ thăm dò tuyến đường từ Sài Gòn lên Cao nguyên Trung phần, dẫn đến việc phát hiện cao nguyên đẹp như Lâm Viên?",
     "correctAnswers": ["Alexandre Yersin", "Bác sĩ A.Yersin"],
     "incorrectAnswers": ["Paul Doumer", "Phan Bội Châu"]
   },
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "multipleResponses",
     "question": "Các thay đổi chính trị và kinh tế chính ở Lâm Đồng dưới thời thuộc địa Pháp từ 1893 đến 1945 bao gồm những điều gì?",
     "correctAnswers": [
@@ -30,7 +30,7 @@
     "incorrectAnswers": ["Thành lập tỉnh Lâm Viên", "Xây dựng tỉnh Djiring"]
   },
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "picture",
     "path": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Petit-Yersin.jpg",
     "question": "Hãy cho biết đây là ai?",
@@ -38,7 +38,7 @@
     "incorrectAnswers": ["Paul Doumer", "Galileo Galilei", "Rosalind Franklin"]
   },
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "video",
     "path": "assets/videos/VideoDalatPalace.mp4",
     "question": "Đây là khách sạn nào được hoàn thành xây dựng và mở năm 1922?",
@@ -46,7 +46,7 @@
     "incorrectAnswers": ["Dalat Blanc", "Colline", "Goldient Boutique"]
   },
   {
-    "categoryName": "Chuyên đề 1. Lịch sử Lâm Đồng giai đoạn 1893 – 1945s",
+    "categoryName": "Chuyên đề 1",
     "type": "audio",
     "path": "assets/audio/CauHoiAudioChuyenDe1.mp3",
     "question": "Bác sĩ Yersin đã khám phá ra cao nguyên nào",
@@ -56,5 +56,601 @@
       "Cao nguyên Đắk Lắk",
       "Cao nguyên Kon Tum"
     ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Thực dân Pháp tiến hành khai phá Lâm Đồng vì lý do gì?",
+    "correctAnswers": [
+      "Phát hiện cao nguyên Lâm Viên và tiềm năng kinh tế của vùng đất."
+    ],
+    "incorrectAnswers": [
+      "Thời kỳ Cách mạng tháng Tám.",
+      "Sự phản kháng dữ dội của nhân dân.",
+      "Sự giáo dục và tôn trọng văn hóa bản địa."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleResponses",
+    "question": "Năm 1893, ai được giao nhiệm vụ khám phá cao nguyên Lâm Viên?",
+    "correctAnswers": ["Alexandre Yersin", "Bác sĩ A. Yersin"],
+    "incorrectAnswers": ["Paul Doumer", "Phan Bội Châu"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Thành phố Đà Lạt được quy hoạch và triển khai dự án vào năm nào?",
+    "correctAnswers": ["1899"],
+    "incorrectAnswers": ["1905", "1916", "1920"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tại sao Đà Lạt được lựa chọn làm địa điểm xây dựng trạm nghỉ dưỡng của Pháp?",
+    "correctAnswers": ["Khí hậu tương tự châu Âu."],
+    "incorrectAnswers": [
+      "Đất đai phong phú.",
+      "Sự yên bình của vùng đất.",
+      "Gần biển Trung Kỳ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Địa điểm nào trở thành tỉnh lị Đà Lạt vào năm 1916?",
+    "correctAnswers": ["Tỉnh Lâm Viên"],
+    "incorrectAnswers": [
+      "Tỉnh Đồng Nai Thượng",
+      "Tỉnh Bình Thuận",
+      "Đơn vị hành chính trực thuộc Toàn quyền Đông Dương"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tỉnh Đồng Nai Thượng bị bãi bỏ năm nào?",
+    "correctAnswers": ["1905"],
+    "incorrectAnswers": ["1916", "1920", "1941"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Đâu là đơn vị hành chính trực thuộc Toàn quyền Đông Dương vào năm 1920?",
+    "correctAnswers": ["Đồng Nai Thượng"],
+    "incorrectAnswers": [
+      "Đà Lạt",
+      "Đơn vị hành chính trực thuộc Toàn quyền Đông Dương",
+      "Djiring"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tại sao việc quản lý vùng Lâm Đồng dưới thời Pháp thuộc được thực hiện?",
+    "correctAnswers": ["Cơ sở hạ tầng quân sự và an ninh."],
+    "incorrectAnswers": [
+      "Cơ sở hạ tầng kỹ thuật và khoa học.",
+      "Cơ sở hạ tầng dân sinh và dân cư địa phương.",
+      "Cơ sở hạ tầng văn hóa và giáo dục."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Đâu là thông tin sai về việc quản lí vùng Lâm Đồng dưới thời Pháp thuộc?",
+    "correctAnswers": [
+      "Từ năm 1928, tỉnh lị tỉnh Đồng Nai Thượng chuyển về Đà Lạt."
+    ],
+    "incorrectAnswers": [
+      "Đà Lạt trở thành tỉnh lị của tỉnh Lâm Viên từ năm 1916.",
+      "Đồng Nai Thượng được tái lập năm 1920 với tỉnh lị tại Djiring.",
+      "Tỉnh Lâm Viên được lập lại với tỉnh lị đặt tại Djiring vào năm 1941."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Việc chia tách, sáp nhập tỉnh Đồng Nai Thượng và Lâm Viên làm thay đổi gì?",
+    "correctAnswers": ["Tất cả các phương án trên đều đúng."],
+    "incorrectAnswers": [
+      "Tỉnh Đồng Nai Thượng có đại lí ở Djiring.",
+      "Tỉnh Lâm Viên có đại lí ở Đà Lạt.",
+      "Đà Lạt trở thành tỉnh lị của tỉnh Lâm Viên."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Thực dân Pháp thúc đẩy khai thác tài nguyên ở hai tỉnh Lâm Viên, Đồng Nai Thượng bằng cách nào?",
+    "correctAnswers": ["Chiếm đoạt đất canh tác để lập đồn điền."],
+    "incorrectAnswers": [
+      "Đầu tư vào cơ sở hạ tầng dân sinh.",
+      "Khuyến khích người dân trồng trọt tự cung tự cấp.",
+      "Xây dựng trường học và cơ sở y tế."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Người Kinh từ các tỉnh khác được chiêu mộ đến Lâm Viên, Đồng Nai Thượng với mục đích gì?",
+    "correctAnswers": [
+      "Làm việc trong các đồn điền và công sở của thực dân Pháp."
+    ],
+    "incorrectAnswers": [
+      "Tham gia vào phong trào yêu nước và đấu tranh chống thực dân Pháp.",
+      "Khám phá và khai thác tài nguyên địa phương.",
+      "Xây dựng các trung tâm văn hóa cho cộng đồng."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Những người lao động ở Lâm Viên, Đồng Nai Thượng thường gặp phải những vấn đề gì trong công việc?",
+    "correctAnswers": ["Bị bóc lột, áp bức, la mắng từ chủ, cai thầu."],
+    "incorrectAnswers": [
+      "Nhận được lương thưởng công bằng.",
+      "Được bảo vệ và đối xử công bằng.",
+      "Có cơ hội thăng tiến trong công việc."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Những năm đầu của thế kỷ XX, tại Lâm Viên, Đồng Nai Thượng, các tổ chức cộng sản ra đời đã gây ra điều gì?",
+    "correctAnswers": [
+      "Kích thích tinh thần yêu nước trong các tầng lớp nhân dân."
+    ],
+    "incorrectAnswers": [
+      "Làm gia tăng sự bất ổn kinh tế.",
+      "Tạo ra mâu thuẫn trong cộng đồng lao động.",
+      "Làm tăng sự chiến đấu chống chính quyền địa phương."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Mâu thuẫn giữa nhân dân và chính quyền thực dân tại Lâm Viên, Đồng Nai Thượng đã trở nên gay gắt do nguyên nhân gì?",
+    "correctAnswers": [
+      "Chính sách cai trị, bóc lột của thực dân Pháp làm đời sống nhân dân ngày càng khó khăn."
+    ],
+    "incorrectAnswers": [
+      "Sự can thiệp của các tổ chức cộng sản.",
+      "Sự thiếu tin cậy của người dân đối với chính quyền địa phương.",
+      "Sự mất lòng tin vào các tổ chức xã hội."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Chi bộ cộng sản đầu tiên ở Lâm Viên được thành lập bởi tổ chức nào?",
+    "correctAnswers": ["Tân Việt Cách mạng đảng"],
+    "incorrectAnswers": [
+      "Liên tỉnh Ngũ Trang",
+      "Hội nghị Tân Mỹ",
+      "Đảng Cộng sản Việt Nam"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Chi bộ Tân Việt Đà Lạt tác động như thế nào đối với công nhân, công chức và trí thức?",
+    "correctAnswers": [
+      "Tuyên truyền, vận động, giác ngộ cách mạng và xây dựng cơ sở trong họ."
+    ],
+    "incorrectAnswers": [
+      "Làm gia tăng sự bất ổn trong quần chúng.",
+      "Tạo ra mâu thuẫn và xung đột trong cộng đồng.",
+      "Khuyến khích họ tiếp tục làm việc dưới sự thống trị của thực dân Pháp."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Hội nghị nào đã công bố việc hợp nhất các tổ chức cộng sản, thành lập các chi bộ Đảng Cộng sản Việt Nam cực Nam?",
+    "correctAnswers": ["Hội nghị ở Tân Mỹ (Ninh Thuận)"],
+    "incorrectAnswers": [
+      "Hội nghị ở Đà Lạt",
+      "Hội nghị ở Ngũ Trang",
+      "Hội nghị ở Đắk Lắk"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Việc thành lập chi bộ Đảng Cộng sản Việt Nam đầu tiên của tỉnh Lâm Viên diễn ra tại đâu?",
+    "correctAnswers": [
+      "Trên tầng gác căn buồng số 2 nhà xe Khách sạn Palace (Đà Lạt)"
+    ],
+    "incorrectAnswers": [
+      "Trên tầng gác nhà thờ tại Đà Lạt",
+      "Tại phòng họp của Liên tỉnh Ngũ Trang",
+      "Tại nhà hàng quán cà phê tại Đà Lạt"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Chi bộ cộng sản đầu tiên ở Lâm Viên được lãnh đạo bởi ai?",
+    "correctAnswers": ["Ông Trần Diệm"],
+    "incorrectAnswers": ["Ông Trần Huy", "Ông Trần Nam", "Ông Trần Hoàng"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Chi bộ Cộng sản tách thành hai chi bộ vào cuối năm 1930 tại Lâm Viên với tên gì?",
+    "correctAnswers": ["Chi bộ Palace và Chi bộ Cầu Quẹo"],
+    "incorrectAnswers": [
+      "Chi bộ Đà Lạt và Chi bộ Dran",
+      "Chi bộ Trường Sơn và Chi bộ Cầu Đất",
+      "Chi bộ Đồi Thông và Chi bộ Lý Thái Tổ"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện gì đã diễn ra trong dịp kỉ niệm Ngày Quốc tế Lao động 1/5/1930?",
+    "correctAnswers": [
+      "Cờ đỏ búa liềm và truyền đơn xuất hiện nhiều nơi ở khu vực Đà Lạt, Dran và Cầu Đất."
+    ],
+    "incorrectAnswers": [
+      "Cuộc bãi công tại công trường Đại Đồng Tâm.",
+      "Hội thảo văn hóa nghệ thuật tại nhà văn hóa huyện.",
+      "Cuộc diễu hành lớn qua các đường phố chính."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ngày nào đánh dấu sự bắt đầu của cuộc bãi công tại công trường đường hầm Cầu Đất?",
+    "correctAnswers": ["Ngày 4/5/1930"],
+    "incorrectAnswers": ["Ngày 1/5/1930", "Ngày 10/5/1930", "Ngày 8/3/1930"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Nguyên nhân chính dẫn đến sự tạm lắng xuống của phong trào cách mạng ở Lâm Viên - Đồng Nai Thượng vào cuối tháng 4/1931 là gì?",
+    "correctAnswers": [
+      "Bắt giữ các đảng viên và ngừng hoạt động của các tổ chức cách mạng."
+    ],
+    "incorrectAnswers": [
+      "Sự phân hóa nội bộ trong chi bộ Đảng.",
+      "Khủng bố từ phía quân đội Pháp.",
+      "Mâu thuẫn xã hội nội bộ trong quần chúng."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện gì diễn ra vào ngày 6/3/1931?",
+    "correctAnswers": [
+      "Một số đảng viên và cơ sở cách mạng bị bắt trong khi đang in truyền đơn và tài liệu của Đảng."
+    ],
+    "incorrectAnswers": [
+      "Hội thảo văn hóa nghệ thuật tại trung tâm thành phố.",
+      "Cuộc biểu tình của công nhân yêu cầu tăng lương.",
+      "Diễu hành kỉ niệm ngày thành lập chi bộ Đảng."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Công nhân của hãng Đờ-ra-ga (Dragage) ở Đà Lạt đã thực hiện hành động gì đáng chú ý?",
+    "correctAnswers": [
+      "Bãi công đòi chủ không sa thải công nhân và không giảm lương."
+    ],
+    "incorrectAnswers": [
+      "Biểu tình yêu cầu cải thiện điều kiện làm việc.",
+      "Cuộc đình công đòi tăng lương.",
+      "Tổ chức đảng viên đi quyên góp cho quỹ cứu trợ công nhân."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Kết quả của cuộc bãi công tại công trường đường hầm Cầu Đất?",
+    "correctAnswers": ["Công nhân giành được một nửa số lương còn thiếu."],
+    "incorrectAnswers": [
+      "Công nhân không đạt được bất kỳ yêu cầu nào.",
+      "Chủ hãng nhận trả toàn bộ số lương còn thiếu.",
+      "Công nhân bị sa thải sau cuộc bãi công."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện gì đã diễn ra trong dịp kỉ niệm ngày Quốc tế Phụ nữ 8/3/1931?",
+    "correctAnswers": ["Các đảng viên và tổ chức cách mạng bị bắt."],
+    "incorrectAnswers": [
+      "Cuộc biểu tình quy mô lớn của phụ nữ yêu cầu quyền bình đẳng.",
+      "Tổ chức hội thảo về vai trò của phụ nữ trong cách mạng.",
+      "Tổ chức các hoạt động kỷ niệm văn hóa cho phụ nữ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện gì đánh dấu sự chấm dứt của các chi bộ Đảng và tổ chức cách mạng ở Lâm Viên - Đồng Nai Thượng?",
+    "correctAnswers": [
+      "Bắt giữ và ngừng hoạt động của các đảng viên và tổ chức cách mạng."
+    ],
+    "incorrectAnswers": [
+      "Phân hóa nội bộ trong chi bộ Đảng.",
+      "Khủng bố từ phía quân đội Pháp.",
+      "Mâu thuẫn xã hội nội bộ trong quần chúng."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện nào không ghi nhận trong giai đoạn tạm lắng xuống của phong trào cách mạng ở Lâm Viên - Đồng Nai Thượng?",
+    "correctAnswers": ["Hội thảo văn hóa nghệ thuật tại trung tâm thành phố."],
+    "incorrectAnswers": [
+      "Hành động của công nhân hãng Đờ-ra-ga.",
+      "Sự bắt giữ đảng viên và cơ sở cách mạng.",
+      "Cờ đỏ búa liềm và truyền đơn xuất hiện nhiều nơi."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Cách mạng ở Việt Nam thời kỳ này tập trung vào việc gì?",
+    "correctAnswers": ["Chống phát xít và bảo vệ hoà bình."],
+    "incorrectAnswers": [
+      "Độc lập dân tộc.",
+      "Chống bọn phản động tay sai.",
+      "Tự do cá nhân và phát triển dân chủ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Đối với tổ chức Đảng ở Lâm Viên và Đồng Nai Thượng trong giai đoạn này, tình hình thế giới đã diễn ra thế nào?",
+    "correctAnswers": ["Chưa được khôi phục."],
+    "incorrectAnswers": [
+      "Đã tạo ra sự đoàn kết chặt chẽ.",
+      "Phát triển mạnh mẽ.",
+      "Tạm gác bỏ hoạt động."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Mục tiêu chính của Mặt trận Dân chủ Đông Dương trong thời kỳ 1936-1939 là gì?",
+    "correctAnswers": ["Tự do và dân chủ."],
+    "incorrectAnswers": [
+      "Chống phát xít và bảo vệ hoà bình.",
+      "Độc lập dân tộc.",
+      "Hợp nhất các lực lượng đấu tranh."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tác động của tin tức về phong trào đấu tranh ở các địa phương trong cả nước đối với Lâm Viên và Đồng Nai Thượng là gì?",
+    "correctAnswers": [
+      "Khơi dậy tinh thần đấu tranh của giai cấp công nhân và nhân dân các dân tộc."
+    ],
+    "incorrectAnswers": [
+      "Tạo ra sự đoàn kết giữa các tổ chức Đảng.",
+      "Ảnh hưởng đến...",
+      "Sự chuyển biến về ý thức, trình độ giác ngộ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tình hình thế giới và trong nước tác động thế nào đến phong trào cách mạng những năm 1936 - 1939 ở hai tỉnh Lâm Viên - Đồng Nai Thượng?",
+    "correctAnswers": [
+      "Không tạo điều kiện thuận lợi cho việc khôi phục hoạt động của tổ chức Đảng."
+    ],
+    "incorrectAnswers": [
+      "Tạo ra sự đoàn kết...",
+      "Ảnh hưởng đến...",
+      "Tăng cường sự đoàn kết giữa các lực lượng đấu tranh."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ngày nào hơn 200 công nhân ở Sở Thí nghiệm Nông nghiệp Djiring đình công phản đối chủ giảm lương?",
+    "correctAnswers": ["24/8/1936"],
+    "incorrectAnswers": ["2/2/1936", "2/2/1937", "7/7/1937"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Yêu cầu nào khiến hơn 500 công nhân nhà máy chè Cầu Đất đình công vào tháng 2/1936?",
+    "correctAnswers": ["Trả đủ lương và đúng thời hạn."],
+    "incorrectAnswers": [
+      "Giảm giờ làm.",
+      "Tăng thưởng cho công nhân.",
+      "Cải thiện điều kiện làm việc."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Đình công nào trong tháng 2/1937 tại Đà Lạt đòi tăng lương?",
+    "correctAnswers": ["Công trường xây dựng nhà thờ Thiên Chúa giáo."],
+    "incorrectAnswers": [
+      "Nhà máy chè Cầu Đất.",
+      "Sở Thí nghiệm Nông nghiệp Djiring.",
+      "Đường xe lửa Tháp Chàm - Đà Lạt."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Yêu cầu nào trong đình công Tháp Chàm - Đà Lạt tháng 7/1937?",
+    "correctAnswers": [
+      "Trả lại tiền lương bị giảm trong những năm 1933 - 1935 và tăng lương 15%."
+    ],
+    "incorrectAnswers": [
+      "Giảm giờ làm.",
+      "Đòi tăng thưởng cho công nhân.",
+      "Cải thiện điều kiện làm việc."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Sự kiện gì diễn ra vào ngày 1/5/1938 tại rừng Cam Ly?",
+    "correctAnswers": [
+      "Cuộc mít tinh kêu gọi giai cấp công nhân và nhân dân đoàn kết đấu tranh."
+    ],
+    "incorrectAnswers": [
+      "Cuộc biểu tình chống chính phủ.",
+      "Cuộc họp kỷ niệm ngày lễ lớn.",
+      "Cuộc thi âm nhạc và văn nghệ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tổ chức nào đã tổ chức và lãnh đạo công nhân đình công xây dựng Dinh nghỉ mát Toàn quyền Đông Dương vào tháng 8/1938?",
+    "correctAnswers": ["Nhóm Tiến bộ."],
+    "incorrectAnswers": [
+      "Hội Thanh niên du lịch.",
+      "Hội Ái hữu.",
+      "Hội Truyền bá Quốc ngữ."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Cuộc đình công nào được ghi nhận là có quy mô lớn nhất của công nhân Lâm Viên – Đồng Nai Thượng?",
+    "correctAnswers": [
+      "Hơn 1 900 công nhân đồn điền chè, công nhân xe lửa và các xưởng cưa ở Cầu Đất."
+    ],
+    "incorrectAnswers": [
+      "Hơn 200 công nhân ở Sở Thí nghiệm Nông nghiệp Djiring.",
+      "Hơn 500 công nhân nhà máy chè Cầu Đất.",
+      "Công nhân công trường xây dựng nhà thờ Thiên Chúa giáo ở Đà Lạt."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Cuộc nổi dậy của đồng bào các dân tộc thiểu số diễn ra dưới sự lãnh đạo của ai?",
+    "correctAnswers": ["Hai thủ lĩnh K’Voai và K’Nhòi."],
+    "incorrectAnswers": [
+      "Nhóm Tiến bộ.",
+      "Hội Thanh niên du lịch.",
+      "Mộ Cọ (bà trắng)."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Tại Đà Lạt, chi bộ Đảng được khôi phục lại vào thời gian nào?",
+    "correctAnswers": ["Tháng 12/1938"],
+    "incorrectAnswers": ["Tháng 7/1937", "Tháng 8/1938", "Tháng 5/1938"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Các tổ chức quần chúng và chi bộ Đảng ở Đà Lạt ngừng hoạt động vào thời gian nào?",
+    "correctAnswers": ["Cuối tháng 10/1939"],
+    "incorrectAnswers": ["Tháng 12/1938", "Tháng 8/1938", "Tháng 5/1938"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Theo bạn, yếu tố nào đã thúc đẩy cuộc cách mạng tháng Tám năm 1945 ở Lâm Viên – Đồng Nai Thượng diễn ra?",
+    "correctAnswers": [
+      "Thay đổi tình hình thế giới với sự suy yếu của các phát xít Đức và Nhật."
+    ],
+    "incorrectAnswers": [
+      "Sự gia tăng sức ép từ thực dân Pháp.",
+      "Tăng cường quyền lực của các tổ chức đảng phản đế.",
+      "Sự phản kháng dữ dội của nhân dân."
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ai là người được ghi nhận là thủ lĩnh đầu tiên của cuộc cách mạng tháng Tám ở Đà Lạt?",
+    "correctAnswers": ["Phan Đình Phùng"],
+    "incorrectAnswers": ["Hồ Chí Minh", "Mạc Đĩnh Chi", "Phan Bội Châu"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleResponses",
+    "question": "Những biểu hiện nào chứng tỏ sự phản kháng của người dân Lâm Viên – Đồng Nai Thượng trong giai đoạn 1939 – 1945?",
+    "correctAnswers": [
+      "Công nhân làm đường 20 đấu tranh đòi trả lương đúng kì",
+      "Công nhân đồn điền khai thác mủ ngo Gu-ga đốt cháy kho mủ ngo"
+    ],
+    "incorrectAnswers": [
+      "Ngưng trệ sản xuất do thiếu nguồn nguyên liệu",
+      "Sự chấp nhận im lặng trước sự áp bức"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ai là người đứng đầu Uỷ ban nhân dân Cách mạng lâm thời tỉnh Lâm Viên?",
+    "correctAnswers": ["Phan Đức Huy"],
+    "incorrectAnswers": ["Nguyễn Đại Hoà", "Ngô Huy Diễn", "Nguyễn Thế Tính"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ngày 23/8/1945, nhóm người dân nào đã bao vây Dinh Tỉnh trưởng Lâm Viên, buộc viên tỉnh trưởng phải đầu hàng?",
+    "correctAnswers": ["Đoàn biểu tình từ các địa bàn ngoại ô"],
+    "incorrectAnswers": [
+      "Công nhân làm đường 20",
+      "Đoàn biểu tình từ Đà Lạt",
+      "Công nhân đồn điền khai thác mủ ngo Gu-ga"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleResponses",
+    "question": "Những cơ quan nào đã được thành lập sau khi cách mạng tháng Tám năm 1945 thành công ở Lâm Viên và Đồng Nai Thượng?",
+    "correctAnswers": [
+      "Chính quyền cách mạng từ tỉnh đến cơ sở",
+      "Mặt trận Việt Minh từ tỉnh đến cơ sở"
+    ],
+    "incorrectAnswers": [
+      "Tổ chức Đảng ở địa phương",
+      "Uỷ ban Mặt trận phản đế",
+      "Ban cán sự Đảng"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ai là người đứng đầu Uỷ ban nhân dân Cách mạng lâm thời tỉnh Đồng Nai Thượng?",
+    "correctAnswers": ["Nguyễn Đại Hoà"],
+    "incorrectAnswers": ["Phan Đức Huy", "Ngô Huy Diễn", "Nguyễn Thế Tính"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ngày nào được xem là ngày thành lập Uỷ ban nhân dân Cách mạng lâm thời tỉnh Lâm Viên?",
+    "correctAnswers": ["23/8/1945"],
+    "incorrectAnswers": ["21/8/1945", "24/8/1945", "25/8/1945"]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleResponses",
+    "question": "Những biểu hiện nào chứng tỏ sự phản kháng của người dân Lâm Viên – Đồng Nai Thượng trong giai đoạn 1939 – 1945?",
+    "correctAnswers": [
+      "Công nhân làm đường 20 đấu tranh đòi trả lương đúng kì",
+      "Công nhân đồn điền khai thác mủ ngo Gu-ga đốt cháy kho mủ ngo"
+    ],
+    "incorrectAnswers": [
+      "Ngưng trệ sản xuất do thiếu nguồn nguyên liệu",
+      "Sự chấp nhận im lặng trước sự áp bức"
+    ]
+  },
+  {
+    "categoryName": "Chuyên đề 1",
+    "type": "multipleChoices",
+    "question": "Ai là người đứng đầu Uỷ ban nhân dân Cách mạng lâm thời tỉnh Lâm Viên?",
+    "correctAnswers": ["Phan Đức Huy"],
+    "incorrectAnswers": ["Nguyễn Đại Hoà", "Ngô Huy Diễn", "Nguyễn Thế Tính"]
   }
 ]

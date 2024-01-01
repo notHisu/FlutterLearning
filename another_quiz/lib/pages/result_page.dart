@@ -80,7 +80,8 @@ class _QuizFinishedPageState extends State<QuizFinishedPage> {
                 child: ListTile(
                   contentPadding: const EdgeInsets.all(16.0),
                   title: const Text("Score", style: titleStyle),
-                  trailing: Text("${correct / widget.questions.length * 100}%",
+                  trailing: Text(
+                      "${(correct / widget.questions.length * 100).round()}%",
                       style: trailingStyle),
                 ),
               ),
@@ -118,9 +119,12 @@ class _QuizFinishedPageState extends State<QuizFinishedPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      backgroundColor: primaryColor.withOpacity(0.8),
+                      backgroundColor: buttonColor,
                     ),
-                    child: const Text("Goto Home"),
+                    child: const Text(
+                      "Home",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     onPressed: () => Navigator.pop(context),
                   ),
                   ElevatedButton(
@@ -130,9 +134,12 @@ class _QuizFinishedPageState extends State<QuizFinishedPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      backgroundColor: primaryColor,
+                      backgroundColor: buttonColor,
                     ),
-                    child: const Text("Check Answers"),
+                    child: const Text(
+                      "Check Answers",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) => CheckAnswersPage(

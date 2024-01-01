@@ -22,6 +22,8 @@ class QuizDetailsPage extends StatefulWidget {
 class _QuizDetailsPageState extends State<QuizDetailsPage> {
   @override
   Widget build(BuildContext context) {
+    List<String> splittedTitle = widget.selectedCategory.name.split(".");
+    String title = splittedTitle[0];
     return Scaffold(
       backgroundColor: primaryColor,
       appBar: AppBar(
@@ -34,7 +36,7 @@ class _QuizDetailsPageState extends State<QuizDetailsPage> {
           ),
         ),
         title: Text(
-          widget.selectedCategory.name.substring(0, 7),
+          title,
         ),
       ),
       body: Container(

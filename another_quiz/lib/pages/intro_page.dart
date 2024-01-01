@@ -46,6 +46,7 @@ class IntroPage extends StatelessWidget {
 
               // Intro text
               Container(
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(20)),
@@ -55,7 +56,7 @@ class IntroPage extends StatelessWidget {
                     SizedBox(height: 10),
                     // Main text
                     Text(
-                      'Interesting QUIZ Awaits You',
+                      'Interesting QUIZ Awaits',
                       style: TextStyle(
                         color: Color.fromARGB(255, 31, 85, 20),
                         fontSize: 44,
@@ -63,19 +64,17 @@ class IntroPage extends StatelessWidget {
                       ),
                       textAlign: TextAlign.center,
                     ),
-
+                    SizedBox(height: 10),
                     // Sub text
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        'Unleash Your Knowledge, \nIgnite Your Mind',
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 16,
-                        ),
-                        textAlign: TextAlign.center,
+                    Text(
+                      'Unleash Your Knowledge, \nIgnite Your Mind',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
                       ),
+                      textAlign: TextAlign.center,
                     ),
+                    SizedBox(height: 10),
                   ],
                 ),
               ),

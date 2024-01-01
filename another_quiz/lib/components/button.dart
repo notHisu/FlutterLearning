@@ -22,9 +22,9 @@ class MyButton extends StatelessWidget {
             Text(
               text,
               style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(
               width: 10,

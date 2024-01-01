@@ -137,13 +137,16 @@ class _QuizPageState extends State<QuizPage> {
       }
     }
 
+    List<String> splittedTitle = widget.category!.name.split(".");
+    String title = splittedTitle[0];
+
     return WillPopScope(
       onWillPop: onWillPop,
       child: Scaffold(
         key: key,
         backgroundColor: primaryColor,
         appBar: AppBar(
-          title: Text(widget.category!.name),
+          title: Text(title),
           elevation: 0,
           backgroundColor: Colors.transparent,
         ),
@@ -256,7 +259,7 @@ class _QuizPageState extends State<QuizPage> {
                           Column(
                             children: [
                               SizedBox(
-                                height: 200,
+                                height: 150,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20),
                                   child: Image.network(
